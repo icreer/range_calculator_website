@@ -1,0 +1,52 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSE 121b: Week 04 | Sample Solution</title>
+	<link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Projectial Motion Calculator</h1>
+        
+    </header>
+    <main>
+        <section>
+            <h2>Range</h2>
+            
+            <div>
+                <label>g constant:</label>
+                <input type="text" id="g" name="g"></input>
+            </div>
+            
+            <div>
+                <label>Angle:</label>
+                <input type="text" id="angle" name="angle"></input>
+            </div>
+            <div>
+                <label>Inital Velocitu:</label>
+                <input type="text" id="vi" name="vi"></input>
+            </div>
+            
+            <div>
+                <input type="button" id="rangebutton" value="Get Range"></input>
+            </div>
+            <div>
+                <label>Range:</label>
+                <input type="text" id="range" name="range" disabled></input>
+            </div>
+        </section>
+    </main>
+	<footer>
+        &copy;<span id="year"></span> | Projectial Motion Calculator | Final Project
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/calculator.js"></script>
+</body>
+
+</html>
