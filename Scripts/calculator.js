@@ -34,13 +34,13 @@ function std(values, mean){
 }
 
 function get_simple_range_with_un(){
-    let theta_o = parseFloat(document.getElementById('angle').value) * Math.PI / 180;
+    let theta_o = parseFloat(document.getElementById('angle2').value) * Math.PI / 180;
     let theta_un =  parseFloat(document.getElementById('angle_un').value) * Math.PI / 180;
 
-    let v_o = parseFloat(document.getElementById('vi').value);
+    let v_o = parseFloat(document.getElementById('vi2').value);
     let v_un = parseFloat(document.getElementById('vi_un').value);
 
-    let g = parseFloat(document.getElementById('g').value);
+    let g = parseFloat(document.getElementById('g2').value);
 
     let range_values = [];
     let uncerty = 0;
@@ -48,16 +48,16 @@ function get_simple_range_with_un(){
     for (let i = 0; i < 5000; i++){
         let v = v_o + v_un * get_random_number();
         let theta = theta_o + theta_un* get_random_number();
-
-        range_values = range_values.concat(range(v,theta));
+        //console.log(v)
+        //console.log(theta)
+        range_values = range_values.concat(range(v,theta, g));
     }
-    
-    let x = range_values.reduce((suma,i) =>  suma + i) / range_values.length;
+   // console.log(range_values)
     let mean = range_values.reduce((acc, curr)=>{
         return acc + curr
       }, 0) / range_values.length;
-    console.log(range_values.length);
-    console.log(range_values.reduce((sum,i) =>  sum + i));
+    //console.log(range_values.length);
+    //console.log(range_values.reduce((sum,i) =>  sum + i));
     uncerty = std(range_values,mean);
 
     document.getElementById("range_un").value = mean;
