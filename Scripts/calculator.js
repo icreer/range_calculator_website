@@ -24,6 +24,7 @@ function get_random_number(){
     }
     return value
 }
+
 function std(values, mean){
     let k = 0;
     for (let i = 0; i < values.length; i++){
