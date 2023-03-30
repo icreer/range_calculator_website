@@ -94,7 +94,7 @@ function get_range_air_drag(){
 
     let range_value = [];
     console.log("Test");
-    for (let i = 0; i < 500; i++){
+    for (let i = 0; i < 5000; i++){
         let theta = theta0 + theta_un * get_random_number();
         let v = v0 + v_un * get_random_number();
         let y = y0 + y0_un * get_random_number();
